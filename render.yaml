@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: ideavault
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python IdeaVault.py
+    envVars:
+      - key: IDEAVAULT_ALLOWED_HOSTS
+        value: "*.onrender.com"
